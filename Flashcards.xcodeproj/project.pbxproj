@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6626430125F749C1005D2DE3 /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6626430025F749C1005D2DE3 /* CreationViewController.swift */; };
 		66E6AB1C25E194F100294A77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6AB1B25E194F100294A77 /* AppDelegate.swift */; };
 		66E6AB1E25E194F100294A77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6AB1D25E194F100294A77 /* SceneDelegate.swift */; };
 		66E6AB2025E194F100294A77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6AB1F25E194F100294A77 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6626430025F749C1005D2DE3 /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 		66E6AB1825E194F100294A77 /* Flashcards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flashcards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E6AB1B25E194F100294A77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E6AB1D25E194F100294A77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6609879225F41059006576A7 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				66E6AB1D25E194F100294A77 /* SceneDelegate.swift */,
+				66E6AB1B25E194F100294A77 /* AppDelegate.swift */,
+				66E6AB2425E194F100294A77 /* Assets.xcassets */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		6609879325F4107E006576A7 /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				66E6AB1F25E194F100294A77 /* ViewController.swift */,
+				6626430025F749C1005D2DE3 /* CreationViewController.swift */,
+			);
+			path = viewControllers;
+			sourceTree = "<group>";
+		};
 		66E6AB0F25E194F100294A77 = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +120,9 @@
 		66E6AB1A25E194F100294A77 /* Flashcards */ = {
 			isa = PBXGroup;
 			children = (
-				66E6AB1B25E194F100294A77 /* AppDelegate.swift */,
-				66E6AB1D25E194F100294A77 /* SceneDelegate.swift */,
-				66E6AB1F25E194F100294A77 /* ViewController.swift */,
+				6609879225F41059006576A7 /* Misc */,
+				6609879325F4107E006576A7 /* viewControllers */,
 				66E6AB2125E194F100294A77 /* Main.storyboard */,
-				66E6AB2425E194F100294A77 /* Assets.xcassets */,
 				66E6AB2625E194F100294A77 /* LaunchScreen.storyboard */,
 				66E6AB2925E194F100294A77 /* Info.plist */,
 			);
@@ -261,6 +280,7 @@
 				66E6AB2025E194F100294A77 /* ViewController.swift in Sources */,
 				66E6AB1C25E194F100294A77 /* AppDelegate.swift in Sources */,
 				66E6AB1E25E194F100294A77 /* SceneDelegate.swift in Sources */,
+				6626430125F749C1005D2DE3 /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

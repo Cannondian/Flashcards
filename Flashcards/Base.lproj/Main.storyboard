@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,42 +24,157 @@
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.15185517200000001" blue="0.17689898640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who is the first fight in Punch-Out!! Wii?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-ZE-muv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Who is the first fight in Punch-Out!! Wii?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0o-ZE-muv">
                                         <rect key="frame" x="0.0" y="0.0" width="306" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.61088542069999996" blue="0.12603635769999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="xNN-YM-lx0" appends="YES" id="NDD-r9-VQf"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="00M-kW-vz8" appends="YES" id="ZfN-Y1-iB2"/>
+                                    <outletCollection property="gestureRecognizers" destination="xNN-YM-lx0" appends="YES" id="W0J-Mk-o1H"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="96T-tH-rwT">
+                                <rect key="frame" x="54" y="599" width="306" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Soda Popinski">
+                                    <color key="titleColor" red="0.73621329998687135" green="0.93211472659728523" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOptionOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zPo-zf-Ebd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQr-qW-Xd9">
+                                <rect key="frame" x="54" y="667" width="306" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Glass Joe">
+                                    <color key="titleColor" red="0.73621329999999996" green="0.93211472660000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOptionTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M0I-iX-pze"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBy-X2-tmG">
+                                <rect key="frame" x="54" y="735" width="306" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Aran Ryan">
+                                    <color key="titleColor" red="0.73621329999999996" green="0.93211472660000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapOptionThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYN-QO-Esh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyt-f5-vBe">
+                                <rect key="frame" x="188" y="820" width="38" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="6cG-24-Nqg" kind="presentation" id="JSu-Fa-hhL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                     </view>
                     <connections>
                         <outlet property="backLabel" destination="dsB-w5-ul7" id="nEi-3F-5Ok"/>
+                        <outlet property="btnOptionOne" destination="96T-tH-rwT" id="JcC-ge-Qn0"/>
+                        <outlet property="btnOptionThree" destination="OBy-X2-tmG" id="7Jo-4l-s1M"/>
+                        <outlet property="btnOptionTwo" destination="zQr-qW-Xd9" id="Hjf-vO-6ej"/>
+                        <outlet property="card" destination="TlS-Oo-kdb" id="cA6-qF-B0K"/>
                         <outlet property="frontLabel" destination="c0o-ZE-muv" id="yGG-yL-bTD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="00M-kW-vz8">
+                <tapGestureRecognizer id="xNN-YM-lx0">
                     <connections>
-                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="aiF-lg-ZAl"/>
+                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="BjY-zH-cOW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="nA9-of-Xcs">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="cdc-ML-H31" customClass="CreationViewController" customModule="Flashcards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0i4-iI-ZKv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Question" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ps9-tj-DPG">
+                                <rect key="frame" x="70" y="102" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evA-km-kf0">
+                                <rect key="frame" x="70" y="144" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zsw-Gn-aaw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UEt-Mw-g0M">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="1LP-pW-dER">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="cdc-ML-H31" id="MXU-V5-AbM"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="GhT-PP-5vE">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="cdc-ML-H31" id="ld4-1q-Vx7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="evA-km-kf0" id="MFa-Qe-ile"/>
+                        <outlet property="questionTextField" destination="Ps9-tj-DPG" id="2GG-QE-Ue6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MD9-c6-V7U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1614.4927536231885" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7hG-0Q-BTD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="6cG-24-Nqg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cVw-iE-r3C">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cdc-ML-H31" kind="relationship" relationship="rootViewController" id="LOX-M4-Caj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n1a-eQ-n2Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="752" y="94"/>
         </scene>
     </scenes>
     <resources>
