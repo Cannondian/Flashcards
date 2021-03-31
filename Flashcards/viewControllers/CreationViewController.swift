@@ -12,6 +12,13 @@ class CreationViewController: UIViewController {
     @IBOutlet weak var questionTextField: UITextField!
     @IBOutlet weak var answerTextField: UITextField!
     
+    @IBOutlet weak var extraAnswerOneTextField: UITextField!
+    @IBOutlet weak var extraAnswerTwoTextField: UITextField!
+    @IBOutlet weak var extraAnswerThreeTextField: UITextField!
+    
+    var initialQuestion: String?
+    var initialAnswer: String?
+    
     var flashcardsController: ViewController!
     
     override func viewDidLoad()
@@ -19,6 +26,8 @@ class CreationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        questionTextField.text = initialQuestion
+        answerTextField.text = initialAnswer
     }
     
     @IBAction func didTapOnCancel(_ sender: Any)
@@ -34,11 +43,35 @@ class CreationViewController: UIViewController {
         // Get the text in the answer text field
         let answerText = answerTextField.text
         
-        // Call the function to update the flashcard
-        flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+        // Get the text in the extra answers text fields
+        let extraAnswerOneText = extraAnswerOneTextField.text
+        let extraAnswerTwoText = extraAnswerTwoTextField.text
+        let extraAnswerThreeText = extraAnswerThreeTextField.text
         
-        // Dismiss
-        dismiss(animated: true)
+        // Check if empty
+        if questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty
+        {
+            // Show error
+            let alert = UIAlertController(title: "Missing Text", message: "You need to enter both a question and an answer.", preferredStyle: .alert)
+            present(alert,animated: true)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alert.addAction(okAction)
+        }
+        else
+        {
+            var isExisting = false
+            if initialQuestion != nil
+            {
+                isExisting = true
+            }
+            // Call the function to update the flashcard
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, isExisting: isExisting, extraAnswerOne: extraAnswerOneText!, extraAnswerTwo: extraAnswerTwoText!, extraAnswerThree: extraAnswerThreeText!)
+            
+            // Dismiss
+            dismiss(animated: true)
+        }
+        
     }
     /*
     // MARK: - Navigation
